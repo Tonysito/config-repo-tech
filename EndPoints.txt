@@ -1,0 +1,56 @@
+ENDPOINTS
+
+
+1️⃣ Categorías (CategoriaController)
+Método	URL Gateway	Descripción
+GET	http://localhost:8081/categoria-service/categorias	Lista todas las categorías
+GET	http://localhost:8081/categoria-service/categorias/{id}	Obtiene una categoría por su ID
+POST	http://localhost:8081/categoria-service/categorias	Crea una nueva categoría (body JSON)
+DELETE	http://localhost:8081/categoria-service/categorias/{id}	Elimina una categoría por su ID
+
+
+
+2️⃣ Subcategorías (SubCategoriaController)
+Método	URL Gateway	Descripción
+GET	http://localhost:8081/subcategoria-service/subcategorias	Lista todas las subcategorías
+GET	http://localhost:8081/subcategoria-service/subcategorias/{id}	Obtiene una subcategoría por su ID
+GET	http://localhost:8081/subcategoria-service/subcategorias/categoria/{idCategoria}	Lista subcategorías de una categoría específica
+POST	http://localhost:8081/subcategoria-service/subcategorias	Crea una nueva subcategoría (body JSON)
+PUT	http://localhost:8081/subcategoria-service/subcategorias/{id}	Actualiza una subcategoría existente (body JSON)
+DELETE	http://localhost:8081/subcategoria-service/subcategorias/{id}	Elimina una subcategoría por su ID
+
+
+
+3️⃣ Usuarios (UsuarioController)
+Método	URL Gateway	Descripción
+GET	http://localhost:8081/usuario-service/usuarios	Lista todos los usuarios
+GET	http://localhost:8081/usuario-service/usuarios/{id}	Obtiene un usuario por su ID
+POST	http://localhost:8081/usuario-service/usuarios	Crea un usuario (body JSON)
+DELETE	http://localhost:8081/usuario-service/usuarios/{id}	Elimina un usuario por su ID
+POST	http://localhost:8081/usuario-service/usuarios/login	Login de usuario (body JSON: { "email": "...", "password": "..." })
+
+
+
+
+4️⃣ Productos (ProductoController)
+Método	URL Gateway	Descripción
+GET	http://localhost:8081/producto-service/productos	Lista todos los productos
+GET	http://localhost:8081/producto-service/productos/activos	Lista todos los productos activos
+GET	http://localhost:8081/producto-service/productos/{id}	Obtiene un producto por su ID
+GET	http://localhost:8081/producto-service/productos/subcategoria/{idSubCategoria}	Lista productos de una subcategoría específica
+POST	http://localhost:8081/producto-service/productos	Crea un producto (body JSON)
+PUT	http://localhost:8081/producto-service/productos/{id}	Actualiza un producto existente (body JSON)
+DELETE	http://localhost:8081/producto-service/productos/{id}	Elimina un producto por su ID
+GET	http://localhost:8081/producto-service/productos/bajo-stock
+
+
+
+
+Control Stock (controlStockController)
+Método	URL Gateway	Descripción
+GET	http://localhost:8081/control-stock-service/stock/actualizar	Actualiza el reporte de productos bajos en stock
+GET	http://localhost:8081/control-stock-service/stock/listar	Lista todos los productos bajos en stock
+
+
+
+
